@@ -1,0 +1,13 @@
+@import "../../custom.scss";
+
+.order-item-img {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.incr, .decr {
+    background: $primary !important;
+    color: $light;
+    border-radius: 0.4rem;
+    font-size: 0.6rem;
+}

@@ -1,0 +1,15 @@
+@import "../../custom.scss";
+
+.nav-items {
+    color: $secondary !important;
+}
+
+.nav-items:hover{
+    color:  $primary !important;
+    border-right: 4px solid $primary;
+}
+
+.active {
+    color:  $primary !important;
+    border-right: 4px solid $primary;
+}

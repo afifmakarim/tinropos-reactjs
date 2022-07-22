@@ -1,0 +1,10 @@
+@import "../../custom.scss";
+
+.badge {
+    background: $primary;
+}
+
+.badge-list:hover {
+    color: $light;
+    background-color: $primary !important;
+}

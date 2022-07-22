@@ -1,0 +1,20 @@
+.menus {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1.5rem;
+}
+
+.cart {
+    position: relative;
+
+}
+
+.icon-cart {
+    position: absolute;
+    right: 0;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.icon-cart:hover {
+    background: rgba(255, 255, 255, 0.7) !important;
+}

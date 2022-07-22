@@ -1,0 +1,15 @@
+// .test {
+//     border : 1px solid #0000;
+//     border-radius:100em;
+//     width: 160px;
+//     height: 160px;
+// }
+@import "../../custom.scss";
+
+.w-70 {
+    width: 70%;
+}
+
+.bg-body {
+    background: $gray !important;
+}
