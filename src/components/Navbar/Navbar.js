@@ -15,7 +15,7 @@ export default function Navbar() {
       >
         <i class="bi bi-list"></i>
       </span>
-      <h4>Testing</h4>
+      <h4 className="title fw-bolder">TinroPOS</h4>
       <MenuOffcanvas show={show} handle={handleOffcanvas} />
     </div>
   );
