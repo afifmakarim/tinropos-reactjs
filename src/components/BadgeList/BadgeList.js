@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { ToggleButton } from "react-bootstrap";
 import { badgeList } from "../../constant";
 import "./BadgeList.scss";
-export default function BadgeList() {
-  const [radioValue, setRadioValue] = useState("all");
 
+export default function BadgeList({ handleSetType, type }) {
   return (
     <div className="badge-wrapper d-flex gap-4 my-3 flex-wrap">
       {badgeList.map((item, index) => (
@@ -16,8 +15,8 @@ export default function BadgeList() {
           name="radio"
           variant="flat"
           value={item.name}
-          checked={radioValue === item.name}
-          onChange={(e) => setRadioValue(e.target.value)}
+          checked={type === item.name}
+          onChange={(e) => handleSetType(e.target.value)}
         >
           {item.name}
         </ToggleButton>

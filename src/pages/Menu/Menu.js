@@ -7,15 +7,25 @@ import { useSelector } from "react-redux";
 import "./Menu.scss";
 
 export default function Menu() {
+  const [type, setType] = useState("all");
   const [searchInput, setSearchInput] = useState("");
   const [filteredResults, setFilteredResults] = useState([]);
-
+  console.log(type);
   const { productItems } = useSelector((state) => state.product);
+  const typeList = productItems.filter(
+    (item) => item.type === type.toLowerCase()
+  );
+
+  const filterType = type.toLowerCase() === "all" ? productItems : typeList;
+
+  const handleSetType = (type) => {
+    setType(type);
+  };
 
   const searchItems = (searchValue) => {
     setSearchInput(searchValue);
     if (searchInput !== "") {
-      const filteredData = productItems.filter((item) => {
+      const filteredData = filterType.filter((item) => {
         return Object.values(item)
           .join("")
           .toLowerCase()
@@ -31,10 +41,10 @@ export default function Menu() {
     <>
       <div className="p-4 d-flex flex-column bg-body w-70">
         <NavHead searchItems={searchItems} />
-        <BadgeList />
+        <BadgeList handleSetType={handleSetType} type={type} />
         <CardList
           searchInput={searchInput}
-          productItems={productItems}
+          productItems={filterType}
           filteredResults={filteredResults}
         />
       </div>

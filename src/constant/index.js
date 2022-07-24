@@ -58,6 +58,10 @@ const cardList = [
 
 const badgeList = [
   {
+    name: "All",
+    icon: "",
+  },
+  {
     name: "Waffle",
     icon: "",
   },
