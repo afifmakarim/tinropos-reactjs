@@ -13,7 +13,7 @@ export default function Navbar() {
         className="hamburger bg-white fs-2 border px-2 rounded-2"
         onClick={handleOffcanvas}
       >
-        <i class="bi bi-list"></i>
+        <i className="bi bi-list"></i>
       </span>
       <h4 className="title fw-bolder">TinroPOS</h4>
       <MenuOffcanvas show={show} handle={handleOffcanvas} />

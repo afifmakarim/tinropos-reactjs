@@ -1,7 +1,7 @@
 import React from "react";
 import { Form, Button } from "react-bootstrap";
 import "./NavHead.scss";
-export default function NavHead() {
+export default function NavHead({ searchItems }) {
   return (
     <div className="navhead d-flex align-items-center justify-content-between">
       <div className="head-wrapper">
@@ -17,6 +17,7 @@ export default function NavHead() {
             placeholder="Search"
             className="Search me-2 border-0 bi bi-search bg-light"
             aria-label="Search"
+            onChange={(e) => searchItems(e.target.value)}
           />
         </Form>
         <Button variant="primary" className="bg-white border-0">

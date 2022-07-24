@@ -29,9 +29,7 @@ export const cartReducer = (state = globalState, action) => {
 
     case CART_REMOVE_ITEM:
       const deleteTarget = state.cartItems.find((i) => i.id === action.payload);
-      console.log("ini targetnya : ", deleteTarget);
       if (deleteTarget && deleteTarget.qty > 1) {
-        console.log("ada berapa ", deleteTarget.qty);
         return {
           ...state,
           cartItems: state.cartItems.map((obj, i) =>

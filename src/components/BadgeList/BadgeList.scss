@@ -1,10 +1,18 @@
 @import "../../custom.scss";
 
-.badge {
-    background: $primary;
-}
 
 .badge-list:hover {
     color: $light;
     background-color: $primary !important;
+}
+
+
+.btn-flat {
+    background: white;
+    color: $dark;
+}
+
+.btn-check:checked + .btn-flat {
+    color: white;
+    background: $primary;
 }
