@@ -6,7 +6,7 @@ Demo: https://tinropos.herokuapp.com/menu
 
 ## Features
 
-- Dynamic Item Cart
+- Management state cart item using redux
 - Card List using CSS Grid
 - Inspired Design [here](https://dribbble.com/shots/18397732-Winkel-POS-System-of-Food-Shop)
 - Filtered Menu Data
